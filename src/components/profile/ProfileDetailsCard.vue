@@ -29,41 +29,31 @@ onMounted(() => {
 
 <template>
     <Card container-class="relative w-full py-3 mx-auto md:w-2/3">
-        <Button
-            data-test="edit-profile-button"
-            button-class="absolute right-2"
-            text="Edit"
-            @click="emit('toggle-editing')"
-        />
-        <section class="w-full gap-2 flex-col-ic-jc">
+        <section class="w-full gap-2 text-left flex-col-ic-jc">
             <Avatar :username="user.name" avatar-class="text-xl size-20" />
             <TextBlock
-                :text-content="user.name"
+                text-content="Jonathan Humphrey"
                 container-class="flex-col-ic-jc"
                 content-class="my-2 text-2xl"
             />
             <TextBlock
-                label="Address"
-                :text-content="address"
+                label="Location"
+                text-content="Texas, USA"
                 container-class="flex-col-ic-jc"
-                content-class="text-center"
+                content-class="text-left"
             />
 
             <TextBlock
                 label="Email"
-                :text-content="user.email"
+                text-content="jonathanhumphrey10@gmail.com"
                 container-class="flex-col-ic-jc"
             />
             <TextBlock
-                label="Phone Number"
-                :text-content="user.phone"
+                label="Links"
+                text-content=""
                 container-class="flex-col-ic-jc"
             />
-            <TextBlock
-                label="Created"
-                :text-content="handleFormat(user.created_at, 'date', false)"
-                container-class="flex-col-ic-jc"
-            />
+            
         </section>
     </Card>
 </template>

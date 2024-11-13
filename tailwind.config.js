@@ -4,12 +4,12 @@ export default {
     theme: {
         extend: {
             colors: {
-                appBackground: '#FFFAFC',
-                appBackgroundDark: '#001d2a',
-                sidebarBackground: '#38d88e',
-                sidebarBackgroundDark: '#009a98',
-                cardBackground: '#f2ff66',
-                cardBackgroundDark: '#085562',
+                appBackground: '#f8f6f6',           //
+                appBackgroundDark: '#272626',       // Dark Green
+                sidebarBackground: '#559655',
+                sidebarBackgroundDark: '#012B01',   // Lighter Dark Green
+                cardBackground: '#0E460E',
+                cardBackgroundDark: '#559655',
                 primaryText: '#2c3649',
                 primaryTextDark: '#edf0f4',
                 secondaryText: '#9399A1',
@@ -17,17 +17,17 @@ export default {
                     100: '#a9c3ea',
                     200: '#93b5e5',
                     300: '#7ba7e0',
-                    400: '#428bd5',
+                    400: '#0D1C0D',
                     500: '#077ad9',
                 },
                 secondary: {
                     100: '#9197af',
-                    400: '#27344c',
+                    400: '#377637',
                 },
             },
             fontFamily: {
-                display: ['Inter', 'sans-serif'],
-                content: ['Nunito Sans', 'serif'],
+                display: ['betterVCR', 'sans-serif'],
+                content: ['betterVCR', 'serif'],
             },
         },
         screens: {

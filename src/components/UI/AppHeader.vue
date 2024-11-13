@@ -58,19 +58,11 @@ const classes = getStyles(props, 'notificationModal')
 <template>
     <section class="p-2 border-b border-gray-600 shadow-md flex-ie-jend ">
         <h3 class="w-full text-xl font-bold primary-text md:hidden">
-            New Client
+            Jonathan Humphrey
         </h3>
         <div class="gap-2 flex-ie-jend">
             <Button v-if="width < 768" @click="toggleSidebar()" text="Bar" />
-            <section class="relative">
-                <Button text="&#128276;" @click="notificationModal.show" />
-                <span
-                    v-if="notificationModalContent.length > 0"
-                    :class="classes.iconClass"
-                >
-                    {{ notificationModalContent.length }}
-                </span>
-            </section>
+            
             <Avatar avatar-class="cursor-pointer size-10" 
                 @click="avatarModal.toggle"
             />

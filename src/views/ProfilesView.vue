@@ -9,7 +9,7 @@ import { ArrowLeftCircleIcon } from '@heroicons/vue/24/outline'
 const route = useRoute()
 
 const goBack = () => {
-    router.push({ name: 'Manage Profiles' })
+    router.back()
 }
 </script>
 

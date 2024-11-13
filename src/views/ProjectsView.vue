@@ -29,7 +29,7 @@ const projects = [
     >
         
         <section class="grid w-full h-full grid-cols-1 gap-2 mt-1">
-            <TextBlock text-content="Projects"/>
+            <TextBlock text-content="Projects" content-class="text-black dark:text-white" />
             <div v-for="project in projects">
                 <Card
                     :card-title="project.title"

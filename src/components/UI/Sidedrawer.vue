@@ -60,7 +60,7 @@ const classes = getStyles(props, 'sidebar')
             ></div>
 
             <section v-if="showSidebar" :class="classes.containerClass">
-                <h3 :class="classes.titleClass">New Client</h3>
+                <h3 :class="classes.titleClass">Jonathan Humphrey</h3>
                 <div :class="classes.navContainerClass">
                     <RouterLink
                         to="/"
@@ -68,24 +68,14 @@ const classes = getStyles(props, 'sidebar')
                         @click="handleNavigation"
                         >Home</RouterLink
                     >
-                    <RouterLink
-                        to="/orders"
-                        :class="classes.navLinkClass"
-                        @click="handleNavigation"
-                        >Orders</RouterLink
-                    >
+                    
                     <RouterLink
                         to="/projects"
                         :class="classes.navLinkClass"
                         @click="handleNavigation"
                         >Projects</RouterLink
                     >
-                    <RouterLink
-                        to="/profiles"
-                        :class="classes.navLinkClass"
-                        @click="handleNavigation"
-                        >Profiles</RouterLink
-                    >
+                    
                 </div>
             </section>
         </section>

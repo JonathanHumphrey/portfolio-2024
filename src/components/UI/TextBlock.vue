@@ -33,7 +33,7 @@ const classes = ref(getStyles(props, 'textBlock'))
             {{ label }}
         </p>
         <slot>
-            <div class="min-h-6">
+            <div class="text-left min-h-6">
                 <p :class="classes.contentClass">{{ textContent }}</p>
             </div>
         </slot>

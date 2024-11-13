@@ -2,13 +2,14 @@
 import { computed } from 'vue'
 // Assets
 import imageUpload from '@/assets/imageUpload.svg'
+import portrait from '@/assets/portrait.jpg'
 // Styles
 import { getStyles } from '@/composables/getStyles'
 
 const props = defineProps({
     avatarImg: {
         type: String,
-        default: '',
+        default: portrait,
     },
     avatarClass: {
         type: String,
@@ -50,7 +51,7 @@ const { avatarModalContent, avatarModal } = storeToRefs(
             v-if="avatarImg"
             :src="avatarImg"
             :alt="avatarAlt"
-            :class="['w-full', 'h-full', 'rounded-full', avatarModal.showing ? 'rounded-none' : '',]"
+            class='object-cover w-full h-full rounded-full'
         />
         <h2
             v-else-if="!avatarImg && username"
