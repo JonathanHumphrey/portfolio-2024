@@ -7,10 +7,12 @@ import ModalContainer from '@/components/UI/ModalContainer.vue'
 
 <template>
     <div
-        class="overflow-y-auto h-dvh bg-appBackground dark:bg-appBackgroundDark flex-is-js"
+        class="min-h-full bg-appBackground dark:bg-appBackgroundDark flex-is-js"
     >
+        
         <Sidedrawer />
         <ModalContainer />
+        
 
         <section class="w-full overflow-y-scroll">
             <AppHeader />

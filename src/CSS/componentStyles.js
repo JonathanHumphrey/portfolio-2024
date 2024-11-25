@@ -1,18 +1,18 @@
 export const componentStyles = {
     avatarStyles: {
         avatarClass:
-            'flex items-center justify-center mx-auto rounded-full shrink-0 ring-1 size-14 ring-gray-cool-300 dark:bg-gray-700',
+            'flex items-center justify-center mx-auto rounded-full shrink-0 ring-1 size-14 ring-cardBackground dark:bg-gray-700',
     },
     cardStyles: {
         containerClass:
             'border bg-cardBackground rounded-lg border-gray-300 shadow shadow-gray w-full min-h-36 dark:bg-cardBackgroundDark dark:border-gray-600',
         cardTitleText: 'w-fit py-2 font-medium text-2xl',
-        cardContentText: '',
+        cardContentText: 'text-white',
         cardTitleClass: 'text-white'
     },
     buttons: {
         defaultButton:
-            'border border-gray-700 rounded-lg bg-primary-500 dark:bg-blue-600 text-white dark:text-gray-100 py-1 px-2 shadow drop-shadow hover:shadow-lg hover:drop-shadow-md',
+            'border border-gray-700 rounded-lg bg-cardBackground text-white dark:text-gray-100 py-1 px-2 shadow drop-shadow hover:shadow-lg hover:drop-shadow-md',
         dangerButton:
             'border border-gray-700 rounded-lg bg-red-500 text-white py-1 px-2 shadow drop-shadow hover:shadow-lg hover:drop-shadow-md',
         disabledButton:
@@ -20,9 +20,9 @@ export const componentStyles = {
     },
     sidebar: {
         backdropClass:
-            'absolute w-screen h-screen md:hidden z-[5] bg-black opacity-45',
+            'absolute w-screen min-h-screen md:hidden z-[5] bg-black opacity-45 h-[200rem]',
         containerClass:
-            'min-w-40 overflow-x-hidden min-h-screen h-full absolute md:relative bg-sidebarBackground dark:bg-sidebarBackgroundDark py-3 px-2 z-10 border-r',
+            'min-w-40 overflow-x-hidden overflow-y-hidden absolute min-h-screen h-[100rem] md:relative bg-sidebarBackground dark:bg-sidebarBackgroundDark py-3 px-2 z-10 border-r',
         titleClass: 'primary-text font-bold font-display text-xl mb-4',
         navContainerClass: 'flex-col-is-js gap-2',
         navLinkClass:
@@ -53,7 +53,7 @@ export const componentStyles = {
     textBlock: {
         containerClass: 'flex-col-is-js',
         labelClass:
-            'font-bold primary-text opacity-80 text-lg text-center dark:text-white',
+            'font-bold primary-text opacity-80 text-lg text-center text-white',
         contentClass: 'text-white text-xl',
     },
 

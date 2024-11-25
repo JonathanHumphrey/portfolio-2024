@@ -24,7 +24,7 @@ const classes = ref(getStyles(props, 'cardStyles'))
 
 <template>
     <div :class="classes.containerClass">
-        <div class="w-full py-2 custom-gradient">
+        <div class="w-full h-full py-2 custom-gradient">
             <header v-if="cardTitle" class="px-2">
                 <h4 :class="classes.cardTitleClass">
                     {{ cardTitle }}

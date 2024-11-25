@@ -10,6 +10,17 @@ import portrait from '@/assets/portrait.jpg'
 
 // Constants
 import {Personal} from '@/constants/Information.js'
+
+const skills = 
+    [
+        'HTML',
+        'CSS',
+        'Javascript',
+        'C++',
+        'Python'
+
+    ]
+
 </script>
 
 <template>
@@ -17,7 +28,15 @@ import {Personal} from '@/constants/Information.js'
     <section
         class="w-full max-w-[75rem] mx-auto primary-text px-2 font-display flex-col-ic-js "
     >
-        <img :src="portrait" alt="" class="sticky object-cover h-48 mt-4 rounded-full md:w-1/4 sm:w-1/2" />
+        <div class="grid w-full border border-black md:grid-cols-2 sm:grid-cols-1">
+            <img :src="portrait" alt="" class="sticky object-cover m-4 mt-4 rounded-full md:w-1/2 sm:w-1/2 h-3/4" />
+            <Card container-class="md:w-1/2 sm:w-full">
+                <TextBlock label="Hard Skills" text-content="" container-class="mb-0 ml-4" />
+                <ul class="w-1/2 m-5 list-disk" v-for="skill in skills">
+                    <li class="text-white" >{{ skill }}</li>
+                </ul>
+            </Card>
+        </div>
         <section class="grid w-full grid-cols-1 gap-2 mt-8">
             <Card
                 card-title="About Me"

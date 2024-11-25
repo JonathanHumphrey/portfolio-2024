@@ -51,7 +51,7 @@ const classes = getStyles(props, 'sidebar')
 
 <template>
     <transition name="fade">
-        <section >
+        <section>
             <div
                 v-if="showSidebar"
                 id="backdrop"

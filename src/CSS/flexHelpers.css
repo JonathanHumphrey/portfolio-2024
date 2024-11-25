@@ -51,4 +51,7 @@
     .flex-col-ic-jc {
         @apply flex flex-col items-center justify-center;
     }
+    .flex-row-ic-jb {
+        @apply flex flex-row items-center justify-evenly;
+    }
 }
