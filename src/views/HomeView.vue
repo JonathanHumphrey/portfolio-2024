@@ -9,9 +9,9 @@ import TextBlock from '@/components/UI/TextBlock.vue';
 import portrait from '@/assets/portrait.jpg'
 
 // Constants
-import {Personal} from '@/constants/Information.js'
+import { Personal } from '@/constants/Information.js'
 
-const skills = 
+const hardSkills = 
     [
         'HTML',
         'CSS',
@@ -20,6 +20,20 @@ const skills =
         'Python'
 
     ]
+const softSkills = [
+    'Problem Solving',
+    'API Design',
+    'Database Design'
+]
+const downloadResume = () => {
+    const pdfUrl = new URL('@/assets/resume.pdf', import.meta.url).href;
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'Jonathan_Humphrey_FrontEnd.pdf';
+    link.click();
+}
+
+
 
 </script>
 
@@ -28,15 +42,33 @@ const skills =
     <section
         class="w-full max-w-[75rem] mx-auto primary-text px-2 font-display flex-col-ic-js "
     >
-        <div class="grid w-full border border-black md:grid-cols-2 sm:grid-cols-1">
-            <img :src="portrait" alt="" class="sticky object-cover m-4 mt-4 rounded-full md:w-1/2 sm:w-1/2 h-3/4" />
-            <Card container-class="md:w-1/2 sm:w-full">
-                <TextBlock label="Hard Skills" text-content="" container-class="mb-0 ml-4" />
-                <ul class="w-1/2 m-5 list-disk" v-for="skill in skills">
-                    <li class="text-white" >{{ skill }}</li>
-                </ul>
+        <div class="grid md:grid-cols-2 sm:grid-cols-1">
+            <img :src="portrait" alt="" class="sticky z-0 object-cover m-4 mt-4 rounded-full md:w-full sm:w-1/2 h-3/4" />
+            <Card container-class="z-10 mt-2 ">
+                <section class="w-full flex-is-jb">
+                    
+                    <div class="m-5">
+                        <TextBlock label="Hard Skills" text-content="" container-class="mb-0 ml-2" />
+
+                        <ul class="m-5 list-disk" v-for="skill in hardSkills">
+                            <li class="text-white" >{{ skill }}</li>
+                        </ul>
+                    </div>
+                    <div class="m-5">
+                        <TextBlock label="Soft Skills" text-content="" container-class="mb-0 ml-2" />
+
+                        <ul class="m-5 list-disk" v-for="skill in softSkills">
+                            <li class="text-white" >{{ skill }}</li>
+                        </ul>   
+                    </div>
+                </section>
             </Card>
         </div>
+        <Button 
+            text="Download My CV" 
+            button-class="mt-5 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:animate-gradient-x hover:animate-gradient-hover"
+            @click="downloadResume()"
+        />
         <section class="grid w-full grid-cols-1 gap-2 mt-8">
             <Card
                 card-title="About Me"

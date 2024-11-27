@@ -29,6 +29,18 @@ export default {
                 display: ['betterVCR', 'sans-serif'],
                 content: ['betterVCR', 'serif'],
             },
+            animation: {
+                'gradient-hover': 'gradient-x 3s ease infinite',
+              },
+              keyframes: {
+                'gradient-x': {
+                  '0%': { backgroundPosition: '0% 50%' },
+                  '100%': { backgroundPosition: '100% 50%' },
+                },
+              },
+              backgroundSize: {
+                '200%': '200%',
+              },
         },
         screens: {
             sm: '640px', // Small devices (640px and up)
