@@ -7,7 +7,7 @@ import ModalContainer from '@/components/UI/ModalContainer.vue'
 
 <template>
     <div
-        class="min-h-full bg-appBackground dark:bg-appBackgroundDark flex-is-js"
+        class="bg-appBackground dark:bg-appBackgroundDark flex-is-js"
     >
         
         <Sidedrawer />

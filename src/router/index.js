@@ -76,14 +76,14 @@ const routes = [
         ],
     },
     {
-        path: '/profiles',
+        path: '/profile',
         component: ProfilesView,
-        name: 'Profiles',
+        name: 'Profile',
         children: [
             {
                 path: '',
-                name: 'Manage Profiles',
-                component: () => import('@/components/profile/ProfileList.vue'),
+                name: 'Profile',
+                component: () => import('@/components/profile/ProfileDetailsCard.vue'),
             },
             {
                 path: 'new',

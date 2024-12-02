@@ -51,7 +51,7 @@ const classes = getStyles(props, 'sidebar')
 
 <template>
     <transition name="fade">
-        <section>
+        <section class="flex flex-grow min-h-screen ">
             <div
                 v-if="showSidebar"
                 id="backdrop"
@@ -75,7 +75,12 @@ const classes = getStyles(props, 'sidebar')
                         @click="handleNavigation"
                         >Projects</RouterLink
                     >
-                    
+                    <RouterLink 
+                        to="/profile"
+                        :class="classes.navLinkClass"
+                        @click="handleNavigation"
+                        >Profile</RouterLink
+                    >
                 </div>
             </section>
         </section>

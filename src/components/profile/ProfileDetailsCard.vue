@@ -7,6 +7,11 @@ import Card from '@/components/UI/Card.vue'
 import TextBlock from '@/components/UI/TextBlock.vue'
 // Utils
 import { handleFormat } from '@/utils/formatText'
+
+// Assets
+import Github from "@/assets/logos/github.svg"
+import LinkedIn from "@/assets/logos/linkedin.svg"
+
 const props = defineProps({
     user: {
         type: Object,
@@ -28,13 +33,19 @@ onMounted(() => {
 </script>
 
 <template>
-    <Card container-class="relative w-full py-3 mx-auto md:w-2/3">
+    <Card container-class="w-full h-screen md:w-2/3">
         <section class="w-full gap-2 text-left flex-col-ic-jc">
-            <Avatar :username="user.name" avatar-class="text-xl size-20" />
+            <Avatar :username="user.name" avatar-class="text-xl size-40" />
             <TextBlock
                 text-content="Jonathan Humphrey"
                 container-class="flex-col-ic-jc"
                 content-class="my-2 text-2xl"
+            />
+            <TextBlock
+                label="Frontend Developer"
+                container-class="flex-col-ic-jc"
+                text-content=""
+                content-class="my-2 text-xl"
             />
             <TextBlock
                 label="Location"
@@ -53,7 +64,23 @@ onMounted(() => {
                 text-content=""
                 container-class="flex-col-ic-jc"
             />
+            <div class="flex-ic-jc">
+                <a href="https://github.com/JonathanHumphrey" target="_blank">
+                    <img :src="Github" width="50" height="50" class="invert"/>
+                </a>
+                <a href="https://www.linkedin.com/in/jonathan-humphrey-97478223a/" target="_blank">
+                    <img :src="LinkedIn" class="invert"/>
+                </a>
+                
+            </div>
             
         </section>
     </Card>
 </template>
+
+
+<style scoped>
+.invert {
+    filter: invert(1);
+}
+</style>

@@ -44,7 +44,7 @@ const downloadResume = () => {
     >
         <div class="grid md:grid-cols-2 sm:grid-cols-1">
             <img :src="portrait" alt="" class="sticky z-0 object-cover m-4 mt-4 rounded-full md:w-full sm:w-1/2 h-3/4" />
-            <Card container-class="z-10 mt-2 ">
+            <Card container-class="mt-2 z-8 ">
                 <section class="w-full flex-is-jb">
                     
                     <div class="m-5">
