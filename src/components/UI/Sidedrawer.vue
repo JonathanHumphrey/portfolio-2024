@@ -62,25 +62,49 @@ const classes = getStyles(props, 'sidebar')
             <section v-if="showSidebar" :class="classes.containerClass">
                 <h3 :class="classes.titleClass">Jonathan Humphrey</h3>
                 <div :class="classes.navContainerClass">
-                    <RouterLink
-                        to="/"
-                        :class="classes.navLinkClass"
-                        @click="handleNavigation"
-                        >Home</RouterLink
-                    >
                     
-                    <RouterLink
-                        to="/projects"
-                        :class="classes.navLinkClass"
-                        @click="handleNavigation"
-                        >Projects</RouterLink
-                    >
-                    <RouterLink 
-                        to="/profile"
-                        :class="classes.navLinkClass"
-                        @click="handleNavigation"
-                        >Profile</RouterLink
-                    >
+                    <div class="relative inline-block w-3/4 m-2 overflow-hidden rounded-md cursor-pointer top-2 w-1/8 group">
+                        <!-- Sliding Background -->
+                        <span
+                            class="absolute inset-0 w-full p-6 transition-transform origin-left transform scale-x-0 bg-gray-500 group-hover:scale-x-100"
+                        ></span>
+
+                        <RouterLink
+                            to="/"
+                            :class="[classes.navLinkClass, 'relative z-10 flex-is-js w-full']"
+
+                            @click="handleNavigation"
+                            >Home</RouterLink
+                        >
+                    </div>
+                    <div class="relative inline-block w-3/4 m-2 overflow-hidden rounded-md cursor-pointer top-2 w-1/8 group">
+                        <!-- Sliding Background -->
+                        <span
+                            class="absolute inset-0 p-6 transition-transform duration-300 origin-left transform scale-x-0 bg-gray-500 group-hover:scale-x-100"
+                        ></span>
+
+                        <RouterLink
+                            to="/projects"
+                            :class="[classes.navLinkClass, 'relative z-10 flex-is-js w-full']"
+
+                            @click="handleNavigation"
+                            >Projects</RouterLink
+                        >
+                    </div>
+                    <div class="relative inline-block w-3/4 m-2 overflow-hidden rounded-md cursor-pointer top-2 w-1/8 group">
+                        <!-- Sliding Background -->
+                        <span
+                            class="absolute inset-0 p-6 transition-transform origin-left transform scale-x-0 bg-gray-500 group-hover:scale-x-100"
+                        ></span>
+
+                        <RouterLink
+                            to="/profile"
+                            :class="[classes.navLinkClass, 'relative z-10 flex-is-js w-full']"
+
+                            @click="handleNavigation"
+                            >Profile</RouterLink
+                        >
+                    </div>
                 </div>
             </section>
         </section>

@@ -54,4 +54,7 @@
     .flex-row-ic-jb {
         @apply flex flex-row items-center justify-evenly;
     }
+    .flex-row-is-js{
+        @apply flex flex-row items-start justify-start
+    }
 }

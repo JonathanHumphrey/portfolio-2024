@@ -4,13 +4,13 @@ export default {
     theme: {
         extend: {
             colors: {
-                appBackground: '#f8f6f6',           //
+                appBackground: '#e3e1e1',           //
                 appBackgroundDark: '#272626',       // Dark Green
                 sidebarBackground: '#559655',
                 sidebarBackgroundDark: '#012B01',   // Lighter Dark Green
                 cardBackground: '#0E460E',
                 cardBackgroundDark: '#559655',
-                primaryText: '#2c3649',
+                primaryText: '#1c1c1c',
                 primaryTextDark: '#edf0f4',
                 secondaryText: '#9399A1',
                 primary: {
@@ -26,7 +26,7 @@ export default {
                 },
             },
             fontFamily: {
-                display: ['betterVCR', 'sans-serif'],
+                display: ['Ubuntu', 'betterVCR', 'sans-serif'],
                 content: ['betterVCR', 'serif'],
             },
             animation: {

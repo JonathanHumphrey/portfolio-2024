@@ -40,7 +40,7 @@ const downloadResume = () => {
 <template>
     
     <section
-        class="w-full max-w-[75rem] mx-auto primary-text px-2 font-display flex-col-ic-js "
+        class="w-full min-h-screen py-5 max-w-[75rem] primary-text px-4 font-display flex-col-ic-js "
     >
         <div class="grid md:grid-cols-2 sm:grid-cols-1">
             <img :src="portrait" alt="" class="sticky z-0 object-cover m-4 mt-4 rounded-full md:w-full sm:w-1/2 h-3/4" />
@@ -64,11 +64,20 @@ const downloadResume = () => {
                 </section>
             </Card>
         </div>
-        <Button 
-            text="Download My CV" 
-            button-class="mt-5 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:animate-gradient-x hover:animate-gradient-hover"
-            @click="downloadResume()"
-        />
+        
+        <div class="relative inline-block h-10 m-2 overflow-hidden rounded-md cursor-pointer w-1/8 top-2 group">
+            <!-- Sliding Background -->
+            <span
+                class="absolute inset-0 w-full p-6 transition-transform duration-300 origin-left transform scale-x-0 bg-cardBackgroundDark group-hover:scale-x-100"
+            ></span>
+
+            <Button 
+                text="Download My CV" 
+                button-class="relative w-full h-10 border-none flex-ic-jc group-hover:bg-opacity-0 group-hover:padding-3"
+                @click="downloadResume()"
+            />
+        </div>
+        
         <section class="grid w-full grid-cols-1 gap-2 mt-8">
             <Card
                 card-title="About Me"

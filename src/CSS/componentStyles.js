@@ -5,7 +5,7 @@ export const componentStyles = {
     },
     cardStyles: {
         containerClass:
-            'border bg-cardBackground rounded-lg border-gray-300 shadow shadow-gray w-full min-h-36 dark:bg-cardBackgroundDark dark:border-gray-600',
+            'bg-cardBackground rounded-lg w-full min-h-36 dark:bg-cardBackgroundDark shadow-[3px_7px_0px_3px_rgba(0,_0,_0,_0.5)]',
         cardTitleText: 'w-fit py-2 font-medium text-2xl',
         cardContentText: 'text-white',
         cardTitleClass: 'text-white'
@@ -20,13 +20,12 @@ export const componentStyles = {
     },
     sidebar: {
         backdropClass:
-            'absolute w-screen min-h-screen md:hidden z-11 bg-black opacity-45 h-[200rem]',
+            'absolute w-screen min-h-screen md:hidden z-10 bg-black opacity-45 h-[200rem]',
         containerClass:
-            'min-w-40 overflow-x-hidden overflow-y-hidden absolute min-h-screen h-[70rem] md:relative bg-sidebarBackground dark:bg-sidebarBackgroundDark py-3 px-2 z-10 border-r',
+            'min-w-40 overflow-x-hidden overflow-y-hidden absolute min-h-screen h-[70rem] md:relative bg-sidebarBackground dark:bg-sidebarBackgroundDark shadow-gray py-3 px-2 z-10 shadow-[7px_0px_1px_0px_rgba(0,_0,_0,_1)]',
         titleClass: 'primary-text font-bold font-display text-xl mb-4',
         navContainerClass: 'flex-col-is-js gap-2',
-        navLinkClass:
-            'text-lg text-gray-800 dark:text-gray-200 font-display min-w-32 p-1 rounded-md hover:bg-gray-300 hover:dark:bg-gray-500 hover:bg-opacity-70',
+        navLinkClass: 'text-lg primary-text cursor-pointer text-gray-800 dark:text-gray-200 font-display min-w-32 p-1 rounded-md',
     },
     modal: {
         backdropClass: 'absolute w-screen h-screen z-[11] cursor-pointer ',

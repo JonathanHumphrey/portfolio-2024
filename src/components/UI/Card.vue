@@ -22,7 +22,7 @@ const props = defineProps({
 const classes = ref(getStyles(props, 'cardStyles'))
 </script>
 
-<template>
+<template> 
     <div :class="classes.containerClass">
         <div class="w-full h-full py-2 custom-gradient">
             <header v-if="cardTitle" class="px-2">
