@@ -29,9 +29,10 @@ const classes = getStyles(props, 'notificationModal')
 
 // Have this hard coded for now as a proof of concept
 const handleNav = (path) => {
-    console.log(path)
     if(path === 'Profile'){
-        router.push(`/profiles/details/${currentUser.value}`)
+        //router.push(`/profiles/details/${currentUser.value}`)
+        router.push("/profile")
+        
 
     }
     

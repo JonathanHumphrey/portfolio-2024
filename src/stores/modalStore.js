@@ -43,7 +43,7 @@ export const useModalStore = defineStore('modalStore', () => {
         {
             content: 'Profile'
         },
-        {
+        /* {
             content: 'Settings'
         },
         {
@@ -51,7 +51,7 @@ export const useModalStore = defineStore('modalStore', () => {
         },
         {
             content: 'Logout'
-        }
+        }*/
     ])
 
     const changeTeamMember = (member) => {

@@ -61,7 +61,7 @@ const classes = ref(getStyles(props, 'cardStyles'))
     opacity: 0; /* Initial opacity */
     z-index: 5;
     pointer-events: none;
-    animation: flicker 0.25s infinite;
+    animation: flicker 1s infinite;
     content: ""; /* Required for ::after pseudo-element to work */
     position: absolute; /* Position it correctly */
     top: 0;
