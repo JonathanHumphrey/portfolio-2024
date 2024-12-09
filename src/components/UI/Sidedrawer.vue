@@ -70,7 +70,7 @@ const isDesktop = computed(() => {
                 v-if="showSidebar" 
                 :class="[
                     classes.containerClass, 
-                    { 'fixed top-0 left-0': !isDesktop, 'md:relative': isDesktop }
+                    { 'fixed top-0 left-0': isDesktop, 'md:relative': !isDesktop }
                 ]"
             >
                 <h3 :class="classes.titleClass">Jonathan Humphrey</h3>
