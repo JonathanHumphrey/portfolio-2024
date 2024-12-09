@@ -20,9 +20,9 @@ export const componentStyles = {
     },
     sidebar: {
         backdropClass:
-            'fixed inset-0 w-screen md:hidden z-[9] bg-black opacity-35 overflow-x-hidden',
+            'fixed inset-0 w-screen h-screen md:hidden z-[9] bg-black opacity-35 overflow-x-hidden',
         containerClass:
-        'min-w-40 bg-sidebarBackground dark:bg-sidebarBackgroundDark shadow-gray py-3 px-2 z-20 shadow-[7px_0px_1px_0px_rgba(0,_0,_0,_1)] h-full',
+        'min-w-40 fixed top-0 left-0 bg-sidebarBackground dark:bg-sidebarBackgroundDark shadow-gray py-3 px-2 z-20 shadow-[7px_0px_1px_0px_rgba(0,_0,_0,_1)] h-full',
         titleClass: 'primary-text font-bold font-display text-xl mb-4',
         navContainerClass: 'flex-col-is-js gap-2',
         navLinkClass: 'text-lg primary-text cursor-pointer text-gray-800 dark:text-gray-200 font-display min-w-32 p-1 rounded-md',

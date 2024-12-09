@@ -43,16 +43,12 @@ const { width } = useWindowSize()
 // const emit = defineEmits()
 
 const handleNavigation = () => {
-    if (width.value < 768) {
+    if (width.value <= 768) {
         toggleSidebar()
     }
 }
 
 const classes = getStyles(props, 'sidebar')
-const isDesktop = computed(() => {
-    return window.innerWidth <= 768; // Or use a breakpoint utility
-
-})
 
 </script>
 
@@ -68,10 +64,8 @@ const isDesktop = computed(() => {
 
             <section 
                 v-if="showSidebar" 
-                :class="[
-                    classes.containerClass, 
-                    { 'fixed top-0 left-0': isDesktop, 'md:relative': !isDesktop }
-                ]"
+                :class="classes.containerClass"
+                    
             >
                 <h3 :class="classes.titleClass">Jonathan Humphrey</h3>
                 <div :class="classes.navContainerClass">
