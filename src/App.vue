@@ -7,14 +7,14 @@ import ModalContainer from '@/components/UI/ModalContainer.vue'
 
 <template>
     <div
-        class="bg-appBackground dark:bg-appBackgroundDark flex-is-js"
+        class="h-full bg-appBackground dark:bg-appBackgroundDark flex-is-js"
     >
         
         <Sidedrawer />
         <ModalContainer />
         
 
-        <section class="w-full overflow-y-scroll">
+        <section class="w-full overflow-y-scroll md:ml-52">
             <AppHeader />
             <RouterView v-slot="{ Component, route }">
                 <!-- Use a custom transition or fallback to `fade` -->

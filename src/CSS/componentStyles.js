@@ -20,15 +20,15 @@ export const componentStyles = {
     },
     sidebar: {
         backdropClass:
-            'absolute w-screen min-h-screen md:hidden z-10 bg-black opacity-45 h-[200rem]',
+            'fixed inset-0 w-screen md:hidden z-[9] bg-black opacity-35 overflow-x-hidden',
         containerClass:
-            'min-w-40 overflow-x-hidden overflow-y-hidden absolute min-h-screen h-[70rem] md:relative bg-sidebarBackground dark:bg-sidebarBackgroundDark shadow-gray py-3 px-2 z-10 shadow-[7px_0px_1px_0px_rgba(0,_0,_0,_1)]',
+        'min-w-40 bg-sidebarBackground dark:bg-sidebarBackgroundDark shadow-gray py-3 px-2 z-20 shadow-[7px_0px_1px_0px_rgba(0,_0,_0,_1)] h-full',
         titleClass: 'primary-text font-bold font-display text-xl mb-4',
         navContainerClass: 'flex-col-is-js gap-2',
         navLinkClass: 'text-lg primary-text cursor-pointer text-gray-800 dark:text-gray-200 font-display min-w-32 p-1 rounded-md',
     },
     modal: {
-        backdropClass: 'absolute w-screen h-screen z-[11] cursor-pointer ',
+        backdropClass: 'fixed w-screen h-screen z-[9] cursor-pointer opacity-45',
         containerClass:
             'w-max min-w-40 overflow-x-hidden min-h-30 z-[12] absolute bg-sidebarBackground dark:bg-sidebarBackgroundDark rounded-md p-2',
     },

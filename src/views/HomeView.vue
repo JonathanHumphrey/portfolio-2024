@@ -65,7 +65,7 @@ const downloadResume = () => {
             </Card>
         </div>
         
-        <div class="relative inline-block h-10 m-2 overflow-hidden rounded-md cursor-pointer w-1/8 top-2 group">
+        <div class="relative inline-block h-10 m-2 overflow-hidden rounded-md cursor-pointer w-1/8 top-2 group hover:drop-shadow-md">
             <!-- Sliding Background -->
             <span
                 class="absolute inset-0 w-full p-6 transition-transform duration-300 origin-left transform scale-x-0 bg-cardBackgroundDark group-hover:scale-x-100"

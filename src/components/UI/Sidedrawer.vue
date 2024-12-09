@@ -2,6 +2,8 @@
 import { storeToRefs } from 'pinia'
 import { RouterLink } from 'vue-router'
 import { useWindowSize } from '@vueuse/core'
+import { computed } from 'vue'
+
 // Components
 
 // Pinia
@@ -47,11 +49,16 @@ const handleNavigation = () => {
 }
 
 const classes = getStyles(props, 'sidebar')
+const isDesktop = computed(() => {
+    return window.innerWidth <= 768; // Or use a breakpoint utility
+
+})
+
 </script>
 
 <template>
     <transition name="fade">
-        <section class="flex flex-grow min-h-screen ">
+        <section>
             <div
                 v-if="showSidebar"
                 id="backdrop"
@@ -59,7 +66,13 @@ const classes = getStyles(props, 'sidebar')
                 @click="toggleSidebar()"
             ></div>
 
-            <section v-if="showSidebar" :class="classes.containerClass">
+            <section 
+                v-if="showSidebar" 
+                :class="[
+                    classes.containerClass, 
+                    { 'fixed top-0 left-0': !isDesktop, 'md:relative': isDesktop }
+                ]"
+            >
                 <h3 :class="classes.titleClass">Jonathan Humphrey</h3>
                 <div :class="classes.navContainerClass">
                     
