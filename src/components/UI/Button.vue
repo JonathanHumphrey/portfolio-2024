@@ -31,4 +31,5 @@ const classes = getStyles(props, props.buttonType, 'buttons')
     >
         {{ text }}
     </button>
+    
 </template>

@@ -6,6 +6,7 @@ import router from '@/router';
 import Button from '@/components/UI/Button.vue'
 import Card from '@/components/UI/Card.vue';
 import TextBlock from '@/components/UI/TextBlock.vue';
+import DownloadButton from '@/components/UI/DownloadButton.vue'
 import portrait from '@/assets/portrait.jpg'
 
 // Constants
@@ -65,18 +66,7 @@ const downloadResume = () => {
             </Card>
         </div>
         
-        <div class="relative inline-block h-10 m-2 overflow-hidden rounded-md cursor-pointer w-1/8 top-2 group hover:drop-shadow-md">
-            <!-- Sliding Background -->
-            <span
-                class="absolute inset-0 w-full p-6 transition-transform duration-300 origin-left transform scale-x-0 bg-cardBackgroundDark group-hover:scale-x-100"
-            ></span>
-
-            <Button 
-                text="Download My CV" 
-                button-class="relative w-full h-10 border-none flex-ic-jc group-hover:bg-opacity-0 group-hover:padding-3"
-                @click="downloadResume()"
-            />
-        </div>
+        <DownloadButton />
         
         <section class="grid w-full grid-cols-1 gap-2 mt-8">
             <Card

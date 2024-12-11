@@ -6,6 +6,8 @@ import { useDark, useToggle, useWindowSize } from '@vueuse/core'
 // Components
 import Button from '@/components/UI/Button.vue'
 import Avatar from '@/components/UI/Avatar.vue'
+import DownloadButton from '@/components/UI/DownloadButton.vue'
+
 // Pinia
 import { storeToRefs } from 'pinia'
 import { usePrimaryStore } from '@/stores/primaryStore'
@@ -60,9 +62,8 @@ const classes = getStyles(props, 'notificationModal')
         <h3 class="w-full text-xl font-bold primary-text md:hidden">
             Jonathan Humphrey
         </h3>
-        <div class="gap-2 flex-ie-jend">
+        <div class="gap-2 flex-ic-jc">
             <Button v-if="width < 768" @click="toggleSidebar()" text="Bar" />
-            
             <Avatar avatar-class="cursor-pointer size-10" 
                 @click="avatarModal.toggle"
             />

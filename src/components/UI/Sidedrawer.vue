@@ -5,6 +5,7 @@ import { useWindowSize } from '@vueuse/core'
 import { computed } from 'vue'
 
 // Components
+import DownloadButton from '@/components/UI/DownloadButton.vue'
 
 // Pinia
 import { usePrimaryStore } from '@/stores/primaryStore'
@@ -63,9 +64,10 @@ const classes = getStyles(props, 'sidebar')
             ></div>
 
             <section 
-                v-if="showSidebar" 
-                :class="classes.containerClass"
-                    
+                :class="[
+                    classes.containerClass, 
+                    showSidebar ? 'translate-x-0 shadow-[7px_0px_1px_0px_rgba(0,_0,_0,_1)]' : '-translate-x-full'
+                ]"
             >
                 <h3 :class="classes.titleClass">Jonathan Humphrey</h3>
                 <div :class="classes.navContainerClass">
@@ -73,7 +75,7 @@ const classes = getStyles(props, 'sidebar')
                     <div class="relative inline-block w-3/4 m-2 overflow-hidden rounded-md cursor-pointer top-2 w-1/8 group">
                         <!-- Sliding Background -->
                         <span
-                            class="absolute inset-0 w-full p-6 transition-transform origin-left transform scale-x-0 bg-gray-500 group-hover:scale-x-100"
+                            class="absolute inset-0 w-full p-6 transition-all duration-500 origin-left transform scale-x-0 bg-gray-500 group-hover:scale-x-100"
                         ></span>
 
                         <RouterLink
@@ -112,6 +114,7 @@ const classes = getStyles(props, 'sidebar')
                             >Profile</RouterLink
                         >
                     </div>
+                    <DownloadButton />
                 </div>
             </section>
         </section>
