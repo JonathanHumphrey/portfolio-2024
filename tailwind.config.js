@@ -25,6 +25,9 @@ export default {
                     400: '#377637',
                 },
             },
+            boxShadow: {
+                glow: '0 0 12px rgba(255, 255, 255, 0.7)',  // Customize the glow color and spread
+            },
             fontFamily: {
                 display: ['Ubuntu', 'betterVCR', 'sans-serif'],
                 content: ['betterVCR', 'serif'],
