@@ -9,7 +9,7 @@ import image3 from "@/assets/image3.png"
 const projects = [
     {
         title: 'Dungeon Master Toolkit',
-        explanation: 'Dungeon Master Toolkit is an inititive/status effect tracker for people running games of Dungeons and Dragons. ',
+        explanation: 'Dungeon Master Toolkit is an initiative/status effect tracker for people running games of Dungeons and Dragons. The application allows for entry of groups of combatants or individuals into the initiative, keeping track of their armor class, HP and general stats. All stored in local storage for consistency across sessions',
         date: '07/2024', 
         link: 'https://dungeonmastertoolkit.netlify.app/',
         image: image1,
@@ -42,15 +42,15 @@ const projects = [
         class="w-full py-5 max-w-[75rem] primary-text px-4 font-display flex-col-ic-js overflow-hidden"
     >
         <section class="grid h-full grid-cols-1 gap-2 mt-1 md:w-3/4">
-            <TextBlock text-content="Projects" content-class="mb-5 font-bold text-black dark:text-white" />
+            <TextBlock text-content="Projects" content-class="mb-5 text-2xl font-bold text-black dark:text-white" />
             <div v-for="project in projects" class="mb-2 ">
                 <Card
                     :card-title="project.title"
                     card-title-class="text-xl font-bold"
                     container-class="relative transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-glow hover:border-b-2 hover:border-solid dark:hover:border-black hover:border-white hover:z-20"
                 >
-                <section class="grid p-2 md:grid-cols-2 md:grid-rows-1 sm:grid-rows-1">
-                    <div class="p-4 md:w-full">
+                <section class="grid p-1 place-items-center md:grid-cols-2 md:grid-rows-1 sm:grid-rows-1">
+                    <div class="p-2 md:w-full">
                         <a :href="project.link" target="_blank" class="w-full">
                             <img :src="project.image" class="w-full rounded-md"/>
                         </a>

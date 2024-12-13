@@ -63,10 +63,10 @@ const classes = getStyles(props, 'notificationModal')
             Jonathan Humphrey
         </h3>
         <div class="gap-2 flex-ic-jc">
-            <Button v-if="width < 768" @click="toggleSidebar()" text="Bar" />
             <Avatar avatar-class="cursor-pointer size-10" 
                 @click="avatarModal.toggle"
             />
+            <Button v-if="width < 768" @click="toggleSidebar()" text="&#9776;" />
             <Button
                 @click="toggleDark()"
                 :text="isDark ? '&#9788;' : '&#9789;'"

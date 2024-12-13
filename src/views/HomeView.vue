@@ -44,7 +44,13 @@ const downloadResume = () => {
         class="w-full min-h-screen py-5 max-w-[75rem] primary-text px-4 font-display flex-col-ic-js "
     >
         <div class="grid md:grid-cols-2 sm:grid-cols-1">
-            <img :src="portrait" alt="" class="sticky z-0 object-cover m-4 mt-4 rounded-full md:w-full sm:w-1/2 h-3/4" />
+            <section class="">
+                <Card container-class="mt-2 md:w-11/12 sm:w-full">
+                    <TextBlock  text-content="Jonathan Humphrey - Frontend Developer" content-class="md:text-xl sm:text-sm" container-class="h-full m-2" />
+                </Card>
+                <img :src="portrait" alt="" class="sticky z-0 object-cover mt-0 rounded-full md:w-full sm:w-1/2 h-3/4" />
+
+            </section>
             <Card container-class="mt-2 z-8 ">
                 <section class="w-full flex-is-jb">
                     

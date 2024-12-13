@@ -5,7 +5,7 @@ export const componentStyles = {
     },
     cardStyles: {
         containerClass:
-            'bg-cardBackground rounded-lg w-full min-h-36 dark:bg-cardBackgroundDark shadow-[3px_7px_0px_3px_rgba(0,_0,_0,_0.5)]',
+            'bg-cardBackground rounded-lg w-full  dark:bg-cardBackgroundDark shadow-[3px_7px_0px_3px_rgba(0,_0,_0,_0.5)]',
         cardTitleText: 'w-fit py-2 font-medium text-2xl',
         cardContentText: 'text-white',
         cardTitleClass: 'text-white'
@@ -53,7 +53,7 @@ export const componentStyles = {
         containerClass: 'flex-col-is-js',
         labelClass:
             'font-bold primary-text opacity-80 text-lg text-center text-white',
-        contentClass: 'text-white text-xl',
+        contentClass: 'text-white',
     },
 
     metricCard: {
