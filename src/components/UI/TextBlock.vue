@@ -34,7 +34,7 @@ const classes = ref(getStyles(props, 'textBlock'))
         </p>
         <slot>
             <div class="text-left min-h-6">
-                <p :class="classes.contentClass">{{ textContent }}</p>
+                <p :class="classes.contentClass" v-html="textContent"></p>
             </div>
         </slot>
     </div>

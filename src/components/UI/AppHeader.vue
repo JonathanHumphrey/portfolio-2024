@@ -71,6 +71,7 @@ const classes = getStyles(props, 'notificationModal')
                 @click="toggleDark()"
                 :text="isDark ? '&#9788;' : '&#9789;'"
             />
+            
         </div>
         
     </section>
