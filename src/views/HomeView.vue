@@ -26,14 +26,6 @@ const softSkills = [
     'API Design',
     'Database Design'
 ]
-const downloadResume = () => {
-    const pdfUrl = new URL('@/assets/resume.pdf', import.meta.url).href;
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'Jonathan_Humphrey_FrontEnd.pdf';
-    link.click();
-}
-
 
 
 </script>

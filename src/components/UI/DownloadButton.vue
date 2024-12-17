@@ -1,5 +1,13 @@
 <script setup>
+// Components
 import Button from '@/components/UI/Button.vue'
+
+// 
+import { usePrimaryStore } from '@/stores/primaryStore';
+import { storeToRefs } from 'pinia'
+const { getLocation } = usePrimaryStore()
+const {logAnalytics} = usePrimaryStore()
+
 
 const downloadResume = () => {
     const pdfUrl = new URL('@/assets/resume.pdf', import.meta.url).href;
@@ -7,7 +15,13 @@ const downloadResume = () => {
     link.href = pdfUrl;
     link.download = 'Jonathan_Humphrey_FrontEnd.pdf';
     link.click();
+    getLocation()
+    logAnalytics('cv_download')
+
 }
+
+
+
 </script>
 
 <template>
